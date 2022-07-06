@@ -1,0 +1,629 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="icon" href="img/icon.png">
+    <title>Coding Test</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+  </head>
+  <style>
+      html{
+    scroll-behavior: smooth;
+}
+*{
+    font-family: 'poppins';
+}
+
+body{
+    background-color: rgb(242, 246, 253);
+}
+
+.btn-primary{
+    background: orange;
+    border: 0;
+    padding: 15px 40px 15px 40px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.btn-primary:hover{
+    background: rgb(171, 115, 10);
+    border: 0;
+}
+
+.hero
+{
+    margin-top: 160px;
+    margin-bottom: 100px;
+}
+
+.hero img{
+    transition: 0.2s;
+    filter: grayscale(100%);   
+    transition-property: all;
+    transition-duration: 500ms;
+}
+
+.hero img:hover{
+    transform: scale(1.1);
+    filter: grayscale(0%);
+}
+
+.hero h1{
+    font-family: 'Poppins';
+    font-weight: 700;
+    color: #2F281E;
+}
+.hero p{
+    font-family: 'Poppins';
+    font-weight: 400;
+    color: #2F281E;
+}
+
+.btn-secondary{
+    background: none;
+    border: 1 #19232e;
+    padding: 15px 40px 15px 40px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #173A56;
+}
+
+.btn-secondary:hover{
+    background: black;
+    border: 1 #000000;
+}
+.btn-success{
+    font-family: 'Poppins';
+    font-weight: bold;
+}
+
+.nav-navbar .navbar-link{
+    color: #2F281E;
+}
+.product{
+    margin-top: 160px;
+    margin-bottom: 100px;
+}
+.product h2{
+    font-family: 'Poppins';
+    font-weight: 700;
+    color: #2F281E;
+}
+
+.product .card{
+    transition: 0.3s;
+    transition-property: all;
+    transition-duration: 500ms;
+}
+
+.product .card:hover{
+    transform: scale(1.1);
+}
+
+.sesion{
+    margin-top: 220px;
+}
+
+.sesion h1{
+    font-family: 'Poppins';
+    font-weight: 700;
+    color: #2F281E;
+}
+
+.boost{
+    margin-top: 240px;
+    margin-bottom: 100px;
+}
+
+.boost h1{
+    font-family: 'Poppins';
+    font-weight: 700;
+    color: #2F281E;
+}
+
+.boost .gambar{
+    transition: 0.2s;
+    margin-left: 320px;
+    transition-property: all;
+    transition-duration: 500ms;
+}
+
+.boost .gambar:hover{
+    transform: scale(1.1);
+}
+
+.recommended{
+    margin-top: 160px;
+    margin-bottom: 100px;
+}
+
+.recommended h1{
+    font-weight: 700;
+    font-family: 'poppins';
+    color: #2F281E;
+}
+
+.recommended .card{
+    border: 1 solid;
+    box-shadow: 13px 18px 18px -4px rgba(0,0,0,0.29);
+    -webkit-box-shadow: 13px 18px 18px -4px rgba(0,0,0,0.29);
+    -moz-box-shadow: 13px 18px 18px -4px rgba(0,0,0,0.29);
+}
+
+.build{
+    margin-top: 240px;
+    margin-bottom: 100px;
+}
+
+.build h1{
+    font-family: 'Poppins';
+    font-weight: bold;
+    color: #2F281E;
+}
+.footer footer{
+    margin-left: 50px;
+}
+
+.footer footer .huruf{
+    color: black;
+}
+.footer footer .huruf:hover{
+    color: blue;
+}
+.footer footer .hup{
+    margin-left: 100px;
+}
+
+.footer footer .jumbo{
+    margin-left: 100px;
+    margin-top: 40px;
+}
+
+.footer footer .baru{
+    margin-right: 30px;
+    margin-top: 80px;
+}
+
+.footer footer .hust{
+    margin-right: 120px;
+    margin-top: 0;
+}
+
+@media (max-width: 991.98px) { 
+    .btn-warning .btn-secondary{
+        margin-bottom: 10px;
+        margin-left: 0 !important;
+    }
+ }
+
+@media only screen and (max-width: 768px){
+    .btn-warning .btn-secondary{
+        margin-bottom: 10px;
+        margin-left: 0 !important;
+    }
+}
+  </style>
+  <body>
+    <nav class="navbar py-3 navbar-expand-lg navbar-light bg-light fixed-top shadow-sm">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <img width="250" src="img/logo.png" alt="gambar logo"> 
+            </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item align-self-center">
+                <a class="nav-link active" aria-current="page" href="#product"><i class='bx bx-shopping-bag bx-md bx-tada-hover'></i></a>
+              </li>
+              <li class="nav-item align-self-center">
+                <a class="nav-link active" href="shop.php"><i class='bx bx-cart bx-md bx-tada-hover'></i></a>
+              </li>
+              <li class="nav-item align-self-center">
+                <a class="nav-link active" href="#pricing"><i class='bx bx-purchase-tag bx-md bx-tada-hover'></i></a>
+              </li>
+              <li class="nav-item align-self-center">
+                <a class="nav-link active" href="#recommended"><i class='bx bx-globe bx-md bx-tada-hover'></i></a>
+              </li>
+              <li class="nav-item align-self-center">
+              <div class="btn-group" style="border: none;">
+                <a class="link-dark" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class='bx bx-user-circle bx-md bx-tada-hover'></i>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-lg-end">
+                  <li><button class="dropdown-item px-4" type="button">Settings</button></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item btn px-3 btn-warning " href="#" role="button"><strong><i class='bx bx-log-out'></i> Logout</strong></a></li>
+                </ul>
+              </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="row">
+                <div class="col align-self-center">
+                    <h1 class="mb-4">
+                        The Design Thingking Superpowers
+                    </h1>
+                    <p class="mb-5">
+                        Tools, tutorials, design and innovation experts, all in one place! the most intuitive way to imagine your next user experience.
+                    </p>
+                    <a class="btn btn-primary" href="shop.php" role="button">Get Started</a>
+                </div>
+                <div class="col d-none d-sm-block">
+                    <img width="600" src="img/hero.png" alt="Gambar icon">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="product" id="product">
+      <div class="container">
+        <div class="row text-center mb-3">
+          <div class="mb-4">
+           <h2>Products</h2>
+          </div>
+          <div class="mb-5 fw-lighter">
+            <h6 style="color: green;">
+              Ini Adalah Beberapa Product Yang kami Tampilkan
+            </h6>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4 baru">
+            <div class="card">
+              <a href="#">
+              <img src="img/3.jpg" class="card-img-top" alt="product1">
+            </a>
+              <div class="card-body">
+                <strong><a class="card-text link-primary" style="text-decoration: none; font-size: large;" href="#"> Shoes </a></strong><br>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+              </div>
+          </div>
+          <div class="col-md-4 baru">
+            <div class="card">
+              <a href="#">
+              <img src="img/1.jpg" class="card-img-top" alt="product2">
+            </a>
+              <div class="card-body">
+                <strong><a class="card-text link-primary" style="text-decoration: none; font-size: large;" href="#"> Plant </a></strong><br>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+              </div>
+          </div>
+          <div class="col-md-4 baru">
+            <div class="card">
+              <a href="#">
+              <img src="img/2.jpg" class="card-img-top" alt="product3">
+            </a>
+              <div class="card-body">
+                <strong><a class="card-text link-primary" style="text-decoration: none; font-size: large;" href="#"> Camera </a></strong><br>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sesion" id="shop">
+      <div class="container">
+        <div class="row mb-3">
+          <div class="col mb-4 align-self-end">
+            <h1 class="mb-4">
+              Start Shopping Now
+            </h1>
+            <h6 class="mb-5 fw-lighter" style="color: green;">
+              Temui Product Berdasarkan Kategori Yang Kami Sediakan
+          </h6>
+          </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+      <div class="row ">
+        <div class="col-md-3 mt-4">
+          <div class="card" style="width: 18rem;">
+            <img src="img/work1.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 mt-4">
+          <div class="card" style="width: 18rem;">
+            <img src="img/work2.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 mt-4">
+          <div class="card" style="width: 18rem;">
+            <img src="img/work3.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 mt-4">
+          <div class="card" style="width: 18rem;">
+            <img src="img/5.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 mt-4">
+          <div class="card" style="width: 18rem;">
+            <img src="img/7.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 mt-4">
+          <div class="card" style="width: 18rem;">
+            <img src="img/6.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </section>
+
+    <section class="boost" id="pricing">
+      <div class="container">
+        <div class="row text-center mb-3">
+          <div class="col mb-4 align-self-center">
+            <h1 class="mb-4">
+              Boost Productivity
+            </h1>
+            <h6 class="mb-5 text-center fw-lighter" style="color: green;">
+              Metode pembelian Lebih Santai Dan Terarah
+            </h6>
+          </div>
+        </div>
+          <div class="gambar img-fluid col d-none d-sm-block">
+            <img width="700" src="img/icon.png" alt="icon">
+        </div>
+        <div class="row gy-5 justify-content-center mt-5">
+          <div class="text-center col-6 col-md-3 ">
+            <h4 style="color: green;">
+              667,987
+            </h4>
+            <h5 style="color: green">
+              successful purchase
+            </h5>
+          </div>
+          <div class="text-center col-6 col-md-3 mt-5">
+            <h4 style="color: green;">
+              1,290
+            </h4>
+            <h5 style="color: green">
+              High-Quality Items
+            </h5>
+          </div>
+          <div class="text-center col-6 col-md-3 mt-5">
+            <h4 style="color: green;">
+              34,721
+            </h4>
+            <h5 style="color: green">
+              Best Seller
+            </h5>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="recommended" id="recommended">
+      <div class="container">
+        <div class="row mb-3">
+          <div class="col mb-4 align-content-end">
+            <h1 class="mb-4" style="color: #2F281E;">
+              Recommended Shop
+            </h1>
+            <h6 class="mb-5 fw-lighter" style="color: green;">
+              Membangun Toko Dengan Luar Biasa
+            </h6>
+          </div>
+        </div>
+        <div class="row align-items-center mb-5">
+          <div class="col-md-12 col-lg-4 col-12">
+            <div class="card" style="width: 25rem;">
+              <div class="card-body">
+                <img width="100" height="100" src="img/profil1.jpg" alt="photo profil" class="rounded-circle">
+                <h6 class="card-subtitle mb-2 text-muted mt-4">John Weist</h6>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <img src="https://buildwithangga.com/themes/front/images/ic_star.svg">
+                <img src="https://buildwithangga.com/themes/front/images/ic_star.svg">
+                <img src="https://buildwithangga.com/themes/front/images/ic_star.svg">
+                <img src="https://buildwithangga.com/themes/front/images/ic_star.svg">
+                <img src="https://buildwithangga.com/themes/front/images/ic_star.svg">
+                <br><br>
+                <a class="btn px-3 btn-success ms-3" href="#" role="button">View Detail</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12 col-lg-4 col-12">
+            <div class="card" style="width: 25rem;">
+              <div class="card-body">
+                <img width="100" height="100" src="img/profil2.jpg" alt="photo profil" class="rounded-circle">
+                <h6 class="card-subtitle mb-2 text-muted mt-4">Michael shin</h6>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <img src="https://buildwithangga.com/themes/front/images/ic_star.svg">
+                <img src="https://buildwithangga.com/themes/front/images/ic_star.svg">
+                <img src="https://buildwithangga.com/themes/front/images/ic_star.svg">
+                <img src="https://buildwithangga.com/themes/front/images/ic_star.svg">
+                <img src="https://buildwithangga.com/themes/front/images/ic_star.svg">
+                <br><br>
+                <a class="btn px-3 btn-success ms-3" href="#" role="button">View Detail</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12 col-lg-4 col-12">
+            <div class="card" style="width: 25rem;">
+              <div class="card-body">
+                <img width="100" height="100" src="img/profil3.jpg" alt="photo profil" class="rounded-circle">
+                <h6 class="card-subtitle mb-2 text-muted mt-4">Carl justin</h6>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <img src="https://buildwithangga.com/themes/front/images/ic_star.svg">
+                <img src="https://buildwithangga.com/themes/front/images/ic_star.svg">
+                <img src="https://buildwithangga.com/themes/front/images/ic_star.svg">
+                <img src="https://buildwithangga.com/themes/front/images/ic_star.svg">
+                <img src="https://buildwithangga.com/themes/front/images/ic_star.svg">
+                <br><br>
+                <a class="btn px-3 btn-success ms-3" href="#" role="button">View Detail</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="build" id="build">
+      <div class="container">
+        <div class="row text-center mb-3">
+          <div class="col mb-4 align-self-center">
+            <div class="gambar img-fluid col d-none d-sm-block ">
+              <img width="150" src="img/profil.png" alt="icon">
+              <br><br>
+            <h1 class="mb-4">
+              Ready to Build Your Future?
+            </h1>
+            <h6 class="mb-5 text-center fw-lighter" style="color: green;" >
+              Belajar langsung dari mentor berpengalaman di bidangnya tanpa batas waktu
+            </h6>
+          </div>
+        </div>
+        </div>
+        <div class="row gy-5 justify-content-center">
+          <div class="text-center col-6 col-md-3 ">
+            <a class="btn btn-warning" href="#" role="button" style="border-radius: 50px;">Daftar & Free Tutorials</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="footer" id="footer">
+      <footer>
+        <div class="row text-center align-items-center">
+        <div class="col mb-4 text-start hup">
+          <img width="70" src="img/profil.png" alt="profil"><br><br>
+          <P>
+            Website untuk belajar design dan code dari mentor yang sangat berpengalaman di bidangnya masing-masing.
+          </P> 
+          <P>
+            &copy; 2022 Yusril Prayoga
+          </P> 
+        </div>
+        <div class="col mb-4 text-start jumbo">
+          <strong><p>
+            Start Your Career
+          </p></strong>
+          <p>
+            <a href="#" style="text-decoration: none;" class="huruf">
+              Build Shop
+            </a>
+          </p>
+          <p>
+            <a href="#" style="text-decoration: none;" class="huruf">
+              Custom Shop
+            </a>
+          </p>
+          <p>
+            <a href="#" style="text-decoration: none;" class="huruf">
+              Free Item
+            </a>
+          </p>
+          <p><a href="#" style="text-decoration: none;" class="huruf">
+            Learn For Shop
+          </a>
+        </p>
+        </div>
+        <div class="col mb-4 text-start baru ">
+         <strong>
+           <p>
+            Company
+           </p>
+          </strong>
+           <p><a href="#" style="text-decoration: none;" class="huruf">
+            About
+          </a>
+        </p>
+        </p>
+           <p><a href="#" style="text-decoration: none;" class="huruf">
+            Our Timeline
+          </a>
+        </p>
+        </p>
+           <p><a href="#" style="text-decoration: none;" class="huruf">
+            Contact
+          </a>
+        </p>
+        </p>
+           <p><a href="#" style="text-decoration: none;" class="huruf">
+            Career
+          </a>
+        </p>
+        </p>
+           <p><a href="#" style="text-decoration: none;" class="huruf">
+            Instagram
+          </a>
+        </p>
+        </div>
+        <div class="col mb-4 text-start hust">
+          <strong>
+            <p>
+              Useful Links
+            </p>
+          </strong>
+          </p>
+           <p><a href="#" style="text-decoration: none;" class="huruf">
+            Privacy & Policy
+          </a>
+        </p>
+        </p>
+           <p><a href="#" style="text-decoration: none;" class="huruf">
+            Terms & Conditions
+          </a>
+        </p>
+        </p>
+           <p><a href="#" style="text-decoration: none;" class="huruf">
+            Jam Operasional
+          </a>
+        </p>
+        </div>
+      </div>
+      </footer>
+      <hr>
+    </section>
+    <br><br><br><br>
+
+    <script>
+      var my_element = document.getElementById("#");
+
+      my_element.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+        inline: "nearest"
+      });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  </body>
+</html>
